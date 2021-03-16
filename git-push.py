@@ -2,6 +2,7 @@ import os
 import requests
 import random
 from bs4 import BeautifulSoup
+import time
 class Parser:
 
     def __init__(self):
@@ -24,8 +25,14 @@ def do_git():
     os.system('git push')
 
 
-parser = Parser()
-exit_text = parser._get_response()
-with open('README.md', 'w', encoding='utf-8') as file:
-    file.write(str(exit_text))
-do_git()
+def do_all():
+    parser = Parser()
+    exit_text = parser._get_response()
+    with open('README.md', 'w', encoding='utf-8') as file:
+        file.write(str(exit_text))
+    do_git()
+
+
+for i in range(100):
+    do_all()
+    time.sleep(3)
