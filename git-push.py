@@ -16,7 +16,7 @@ class Parser:
         req = requests.get(link)
         soup = BeautifulSoup(req.text, 'html.parser')
         done_article = soup.find('div', {'class': 'referats__text'})
-        print(done_article)
+        return done_article
 
 
 def do_git():
@@ -24,6 +24,8 @@ def do_git():
     os.system('git push')
 
 
-# parser = Parser()
-# parser._get_response()
+parser = Parser()
+exit_text = parser._get_response()
+with open('README.md', 'w', encoding='utf-8') as file:
+    file.write(str(exit_text))
 do_git()
