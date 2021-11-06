@@ -33,6 +33,6 @@ def do_all():
     do_git()
 
 
-for i in range(100):
+while 1:
     do_all()
     time.sleep(3)
