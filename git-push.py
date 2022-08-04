@@ -34,5 +34,9 @@ def do_all():
 
 
 while 1:
-    do_all()
-    time.sleep(3)
+   try:
+       do_all()
+   except Exception as ex:
+       print(ex)
+       continue
+   time.sleep(3)
