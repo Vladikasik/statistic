@@ -13,10 +13,11 @@ class Parser:
         return to_return
 
     def _get_response(self):
-        link = self._create_link()
-        req = requests.get(link)
-        soup = BeautifulSoup(req.text, 'html.parser')
-        done_article = soup.find('div', {'class': 'referats__text'})
+        #link = self._create_link()
+        #req = requests.get(link)
+        #soup = BeautifulSoup(req.text, 'html.parser')
+        #done_article = soup.find('div', {'class': 'referats__text'})
+        done_article = f'yandex AI went down, so here it is timestamp {time.time()}'
         return done_article
 
 
