@@ -1,1 +1,1 @@
-yandex AI went down, so here it is timestamp 1665430080.2235498
+yandex AI went down, so here it is timestamp 1665430089.7363958
